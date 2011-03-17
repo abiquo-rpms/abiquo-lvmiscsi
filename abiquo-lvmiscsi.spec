@@ -1,8 +1,8 @@
 %define abiquo_basedir /opt/abiquo/lvmiscsi
 
 Name:           abiquo-lvmiscsi
-Version:        1.7
-Release:        8%{?dist}%{?buildstamp}
+Version:        1.7.5
+Release:        1%{?dist}%{?buildstamp}
 Url:            http://www.abiquo.com/
 License:        Multiple
 Group:          Development/Tools
@@ -59,6 +59,9 @@ install -m 755 abiquo-lvmiscsi.init $RPM_BUILD_ROOT/%{_initrddir}/abiquo-lvmiscs
 %{_initrddir}/abiquo-lvmiscsi
 
 %changelog
+* Thu Mar 17 2011 Sergio Rubio <srubio@abiquo.com> - 1.7.5-1
+- version bump
+
 * Mon Feb 21 2011 Sergio Rubio <rubiojr@frameos.org> - 1.7-8
 - set buildarch to noarch
 
