@@ -1,7 +1,7 @@
 %define abiquo_basedir /opt/abiquo/lvmiscsi
 
 Name:           abiquo-lvmiscsi
-Version:        1.7.5
+Version:        2.0
 Release:        1%{?dist}%{?buildstamp}
 Url:            http://www.abiquo.com/
 License:        Multiple
@@ -59,6 +59,9 @@ install -m 755 abiquo-lvmiscsi.init $RPM_BUILD_ROOT/%{_initrddir}/abiquo-lvmiscs
 %{_initrddir}/abiquo-lvmiscsi
 
 %changelog
+* Wed Dec 21 2011 Sergio Rubio <srubio@abiquo.com> - 2.0-1
+- 2.0 version bump
+
 * Thu Mar 17 2011 Sergio Rubio <srubio@abiquo.com> - 1.7.5-1
 - version bump
 
