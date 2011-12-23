@@ -9,6 +9,7 @@ Group:          Development/Tools
 Summary:        Abiquo LVM iSCSI Storage plugin
 Source0:        abiquo-lvmiscsi-tomcat.tar.gz
 Source1:        lvmiscsi.war
+Source2:        server.xml
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Requires:	scsi-target-utils
 BuildRequires:  /usr/bin/unzip
@@ -33,6 +34,7 @@ mkdir -p $RPM_BUILD_ROOT/%{_initrddir}
 cp -r tomcat $RPM_BUILD_ROOT/%{abiquo_basedir}
 mkdir -p $RPM_BUILD_ROOT/%{abiquo_basedir}/tomcat/webapps/ROOT
 install -m 755 abiquo-lvmiscsi.init $RPM_BUILD_ROOT/%{_initrddir}/abiquo-lvmiscsi
+install -m 755 %{SOURCE2} $RPM_BUILD_ROOT/%{abiquo_basedir}/tomcat/conf/
 /usr/bin/unzip -d $RPM_BUILD_ROOT/%{abiquo_basedir}/tomcat/webapps/ROOT/ %{SOURCE1}
 
 
@@ -61,6 +63,8 @@ install -m 755 abiquo-lvmiscsi.init $RPM_BUILD_ROOT/%{_initrddir}/abiquo-lvmiscs
 %changelog
 * Wed Dec 21 2011 Sergio Rubio <srubio@abiquo.com> - 2.0-1
 - 2.0 version bump
+- Updated tomcat
+- Add custom server.xml
 
 * Thu Mar 17 2011 Sergio Rubio <srubio@abiquo.com> - 1.7.5-1
 - version bump
