@@ -7,8 +7,8 @@ Url:            http://www.abiquo.com/
 License:        Multiple
 Group:          Development/Tools
 Summary:        Abiquo LVM iSCSI Storage plugin
-Source0:        abiquo-lvmiscsi-tomcat.tar.gz
-Source1:        lvmiscsi.war
+Source0:        https://github.com/downloads/abiquo-rpms/abiquo-lvmiscsi/%{name}-tomcat-%{version}.tar.gz
+Source1:        %{?abiquo_binaries_url}lvmiscsi.war
 Source2:        server.xml
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Requires:	scsi-target-utils
