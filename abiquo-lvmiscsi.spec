@@ -22,7 +22,7 @@ This package includes lvmiscsi storage plugin.
 
 %prep
 rm -rf $RPM_BUILD_ROOT
-%setup -q -n abiquo-lvmiscsi-tomcat
+%setup -q -n abiquo-lvmiscsi-tomcat-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
